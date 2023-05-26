@@ -1,0 +1,77 @@
+.dysActive {
+    font-family: 'EB Garamond', serif;
+}
+
+.dysNot {
+    font-family: 'Pinyon Script', cursive;
+}
+
+.buttonWCAG{
+    background-color: #50c08b;
+    color:#461e2a;
+}
+
+.buttonDeuteranopia{
+    background-color: #c4a491;
+    color:#312a28;
+}
+
+.buttonTritanopia{
+    background-color: #62b8c7;
+    color:#451f21;
+}
+
+.buttonProtanopia{
+    background-color: #b6aa81;
+    color:#2a2b31;
+}
+
+.buttonAchromatopsia{
+    background-color: #989898;
+    color:#2b2b2b;
+}
+
+.cardWCAG{
+    background-color: #562739;
+    color:#91b7b5;
+}
+
+.cardDeuteranopia{
+    background-color: #3c3536;
+    color:#bca9b7;
+}
+
+.cardTritanopia{
+    background-color: #54292c;
+    color:#93b4c3;
+}
+
+.cardProtanopia{
+    background-color: #343642;
+    color:#b1aeaf;
+}
+
+.cardAchromatopsia{
+    background-color: #373737;
+    color:#ababab;
+}
+
+.bodyWCAG{
+    background-color: #8be8da;
+}
+
+.bodyDeuteranopia{
+    background-color: #e7cfdf;
+}
+
+.bodyTritanopia{
+    background-color: #89d6e8;
+}
+
+.bodyProtanopia{
+    background-color: #dbd5cf;
+}
+
+.bodyAchromatopsia{
+    background-color: #cbcbcb;
+}

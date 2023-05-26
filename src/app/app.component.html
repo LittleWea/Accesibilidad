@@ -1,0 +1,46 @@
+<body [ngClass]="checkBody()">
+
+  
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="fontSize">
+      <button (click)="increaseSize()" (mouseenter)="read('Aumentar tamaño de letra')" [ngClass]="checkColorB()" [style.font-size.px]="sizeTitle">Aumentar tamaño de letra</button>
+      <button (click)="decreaseSize()" (mouseenter)="read('Disminuir tamaño de letra')" [ngClass]="checkColorB()" [style.font-size.px]="sizeTitle">Disminuir tamaño de letra</button>
+      <p [style.font-size.px]="sizeText" (mouseenter)="read('Titulos: ' + sizeTitle + 'px' + 'Texto: ' + sizeText + 'px')">Titulos: {{sizeTitle}} Texto: {{sizeText}}</p>
+    </div>
+    <div class="dislexia">
+      <button (click)="changeDyslexia()" (mouseenter)="read('Dislexia' + dys)" [ngClass]="checkColorB()" [style.font-size.px]="sizeTitle">Dislexia: {{dys}}</button>
+    </div>
+    <div class="daltonismo">
+      <button (click)="changeColor()" (mouseenter)="read('Daltonismo tipo: ' + desDalt)" [style.font-size.px]="sizeTitle" [ngClass]="checkColorB()">Daltonismo: {{desDalt}}</button>
+    </div>
+    <div class="lectorP">
+      <button [style.font-size.px]="sizeTitle" [ngClass]="checkColorB()" (mouseenter)="read('Lector Activado')" (click)="changeReader(); read('Lector Activado')">Lector de pantalla: {{reader}}</button>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row" >
+      <div class="col" *ngFor="let i of inf">
+        <div class="card" style="width: 18rem;">
+          <img src="assets/{{i.img}}" class="card-img-top" alt="..." (mouseenter)="read(i.img)">
+          <div class="card-body" [ngClass]="checkColorC()">
+            <h5 class="card-title" (mouseenter)="read(i.nombre)" [style.font-size.px]="sizeTitle">{{i.nombre}}</h5>
+            <p class="card-text" (mouseenter)="read(i.info)" [style.font-size.px]="sizeText">{{i.info}}</p>
+            <a href="#" class="btn btn-primary" style="border: none;" (mouseenter)="read('Ir a ' + i.nombre)" [ngClass]="checkColorB()" [style.font-size.px]="sizeTitle">Ver mas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: fixed; bottom: 0%; right: 0%;">
+    <button [style.font-size.px]="sizeTitle" class="btn btn-primary" (mouseenter)="read('Accesibilidad')"  [ngClass]="checkColorB()" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      Accessibilidad
+    </button>
+  </div>
+
+</body>
